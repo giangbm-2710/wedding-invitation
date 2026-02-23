@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minh Đức & Đỗ Huyền - Đám Cưới 28.03.2026</title>
+    <meta name="description"
+        content="Trân trọng kính mời bạn đến dự lễ cưới của Minh Đức & Đỗ Huyền vào ngày 28/03/2026" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Great+Vibes&family=Lato:wght@300;400;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- Floating petals container -->
+    <div class="petals-container" id="petals"></div>
+
+    <!-- ===================== HERO SECTION ===================== -->
+    <section class="hero" id="home">
+        <!-- Left photo -->
+        <div class="hero-photo-side hero-photo-left">
+            <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=500&h=700&fit=crop&crop=top&auto=format"
+                alt="Minh Duc and Do Huyen" />
+        </div>
+
+        <!-- Center content -->
+        <div class="hero-center">
+            <!-- Floral deco top-right -->
+            <div class="hero-floral-deco hero-floral-tr">
+                <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="60" cy="30" rx="12" ry="22" stroke="#b5a882" stroke-width="1.2" fill="none"
+                        transform="rotate(-20 60 30)" />
+                    <ellipse cx="82" cy="55" rx="10" ry="18" stroke="#b5a882" stroke-width="1.2" fill="none"
+                        transform="rotate(30 82 55)" />
+                    <ellipse cx="40" cy="58" rx="9" ry="16" stroke="#b5a882" stroke-width="1.2" fill="none"
+                        transform="rotate(-50 40 58)" />
+                    <line x1="60" y1="52" x2="60" y2="90" stroke="#b5a882" stroke-width="1" opacity="0.5" />
+                    <line x1="82" y1="73" x2="55" y2="88" stroke="#b5a882" stroke-width="1" opacity="0.5" />
+                </svg>
+            </div>
+            <!-- Floral deco bottom-left -->
+            <div class="hero-floral-deco hero-floral-bl">
+                <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="40" cy="90" rx="12" ry="22" stroke="#b5a882" stroke-width="1.2" fill="none"
+                        transform="rotate(20 40 90)" />
+                    <ellipse cx="65" cy="72" rx="10" ry="18" stroke="#b5a882" stroke-width="1.2" fill="none"
+                        transform="rotate(-30 65 72)" />
+                    <ellipse cx="22" cy="65" rx="9" ry="16" stroke="#b5a882" stroke-width="1.2" fill="none"
+                        transform="rotate(50 22 65)" />
+                    <line x1="40" y1="68" x2="45" y2="30" stroke="#b5a882" stroke-width="1" opacity="0.5" />
+                </svg>
+            </div>
+            <!-- Soft circle glow bg -->
+            <div class="hero-circle-bg"></div>
+            <div class="hero-content">
+                <p class="hero-pre-title">Chúng Tôi Cưới</p>
+                <h1 class="hero-names">
+                    <span class="name-groom">MINH ĐỨC</span>
+                    <span class="name-ampersand">&amp;</span>
+                    <span class="name-bride">ĐỖ HUYỀN</span>
+                </h1>
+                <p class="hero-date-text">28 - 03 - 2026</p>
+            </div>
+        </div>
+
+        <!-- Right photo -->
+        <div class="hero-photo-side hero-photo-right">
+            <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=500&h=700&fit=crop&crop=top&auto=format"
+                alt="Minh Duc and Do Huyen" />
+        </div>
+    </section>
+
+    <!-- ===================== DATE SECTION ===================== -->
+    <section class="date-section" id="date">
+        <div class="date-floral-top"></div>
+        <div class="container">
+            <p class="date-label">Trân trọng kính mời</p>
+            <p class="date-venue">Sự hiện diện của bạn là niềm vinh dự của chúng tôi!</p>
+            <div class="time-display">
+                <span class="time-num">10</span>
+                <span class="time-sep">:</span>
+                <span class="time-num">30</span>
+            </div>
+            <div class="date-display">
+                <span class="date-num">28</span>
+                <span class="date-dot">.</span>
+                <span class="date-num">3</span>
+                <span class="date-dot">.</span>
+                <span class="date-num">2026</span>
+            </div>
+            <p class="date-venue">Nhà Hàng Tiệc Cưới Hoàng Gia, Hà Nội</p>
+            <p class="date-sub-title">Đám cưới diễn ra sau</p>
+            <div class="countdown" id="countdown">
+                <div class="countdown-item">
+                    <span class="count-num" id="days">00</span>
+                    <span class="count-label">NGÀY</span>
+                </div>
+                <div class="countdown-sep">:</div>
+                <div class="countdown-item">
+                    <span class="count-num" id="hours">00</span>
+                    <span class="count-label">GIỜ</span>
+                </div>
+                <div class="countdown-sep">:</div>
+                <div class="countdown-item">
+                    <span class="count-num" id="minutes">00</span>
+                    <span class="count-label">PHÚT</span>
+                </div>
+                <div class="countdown-sep">:</div>
+                <div class="countdown-item">
+                    <span class="count-num" id="seconds">00</span>
+                    <span class="count-label">GIÂY</span>
+                </div>
+            </div>
+        </div>
+        <div class="date-floral-bottom"></div>
+    </section>
+
+    <!-- ===================== COUPLE INTRO ===================== -->
+    <section class="couple-intro" id="couple">
+        <div class="couple-vertical-text couple-left-text">GROOM</div>
+        <div class="couple-vertical-text couple-right-text">BRIDE</div>
+        <div class="container">
+            <div class="couple-grid">
+                <div class="couple-card animate-on-scroll">
+                    <div class="couple-photo-wrap">
+                        <img src="https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?w=400&h=500&fit=crop&auto=format"
+                            alt="MINH ĐỨC" class="couple-photo" />
+                    </div>
+                    <h3 class="couple-name">Minh Đức</h3>
+                    <p class="couple-role">Chú Rể</p>
+                </div>
+                <div class="couple-center-deco animate-on-scroll">
+                    <div class="ring-icon">
+                        <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="30" cy="40" r="18" stroke="#c9a87c" stroke-width="2" />
+                            <circle cx="50" cy="40" r="18" stroke="#c9a87c" stroke-width="2" />
+                        </svg>
+                    </div>
+                    <p class="couple-center-date">28 / 3 / 2026</p>
+                </div>
+                <div class="couple-card animate-on-scroll">
+                    <div class="couple-photo-wrap">
+                        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=400&h=500&fit=crop&auto=format"
+                            alt="Đỗ Huyền" class="couple-photo" />
+                    </div>
+                    <h3 class="couple-name">Đỗ Huyền</h3>
+                    <p class="couple-role">Cô Dâu</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== ALBUM SECTION ===================== -->
+    <section class="album-section" id="album">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <p class="section-pre">Our</p>
+                <h2 class="section-title">ALBUM ẢNH CƯỚI</h2>
+                <div class="section-divider">
+                    <span></span><span class="dot"></span><span></span>
+                </div>
+            </div>
+            <div class="album-grid animate-on-scroll">
+                <div class="album-item album-item-tall">
+                    <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=400&h=600&fit=crop&auto=format"
+                        alt="Ảnh cưới 1" />
+                    <div class="album-overlay"><span>✦</span></div>
+                </div>
+                <div class="album-item">
+                    <img src="https://images.unsplash.com/photo-1529636798458-92182e662485?w=400&h=300&fit=crop&auto=format"
+                        alt="Ảnh cưới 2" />
+                    <div class="album-overlay"><span>✦</span></div>
+                </div>
+                <div class="album-item">
+                    <img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?w=400&h=300&fit=crop&auto=format"
+                        alt="Ảnh cưới 3" />
+                    <div class="album-overlay"><span>✦</span></div>
+                </div>
+                <div class="album-item album-item-wide">
+                    <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=600&h=300&fit=crop&auto=format"
+                        alt="Ảnh cưới 4" />
+                    <div class="album-overlay"><span>✦</span></div>
+                </div>
+            </div>
+            <div class="album-more animate-on-scroll">
+                <button class="btn btn-primary" id="viewMoreBtn">Xem Thêm</button>
+            </div>
+            <!-- Hidden extra photos -->
+            <div class="album-grid-extra" id="albumExtra" style="display:none">
+                <div class="album-item">
+                    <img src="https://images.unsplash.com/photo-1550005809-91ad75fb315f?w=400&h=300&fit=crop&auto=format"
+                        alt="Ảnh cưới 5" />
+                    <div class="album-overlay"><span>✦</span></div>
+                </div>
+                <div class="album-item">
+                    <img src="https://images.unsplash.com/photo-1583939411023-14783179e581?w=400&h=300&fit=crop&auto=format"
+                        alt="Ảnh cưới 6" />
+                    <div class="album-overlay"><span>✦</span></div>
+                </div>
+                <div class="album-item">
+                    <img src="https://images.unsplash.com/photo-1510076857177-7470076d4098?w=400&h=300&fit=crop&auto=format"
+                        alt="Ảnh cưới 7" />
+                    <div class="album-overlay"><span>✦</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== OUR STORY ===================== -->
+    <section class="story-section" id="story">
+        <div class="story-vertical-text">CHUYỆN CHÚNG MÌNH</div>
+        <div class="story-bg-photo">
+            <img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?w=800&h=600&fit=crop&auto=format&blur=4"
+                alt="" />
+        </div>
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <p class="section-pre">Our Story</p>
+                <h2 class="section-title">CHUYỆN CHÚNG MÌNH</h2>
+                <div class="section-divider">
+                    <span></span><span class="dot"></span><span></span>
+                </div>
+            </div>
+            <div class="story-quote animate-on-scroll">
+                <p class="quote-mark">"</p>
+                <p class="quote-text">Tình yêu không phải là nhìn nhau, mà là cùng nhau nhìn về một hướng.</p>
+                <p class="quote-author">— Antoine de Saint-Exupéry</p>
+            </div>
+            <div class="story-timeline animate-on-scroll">
+                <div class="timeline-item timeline-left">
+                    <div class="timeline-content">
+                        <span class="timeline-date">2020</span>
+                        <h4>Lần Đầu Gặp Gỡ</h4>
+                        <p>Chúng mình gặp nhau lần đầu tiên tại một buổi tiệc bạn bè, một cuộc gặp gỡ tình cờ nhưng định
+                            mệnh.</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+                <div class="timeline-item timeline-right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2021</span>
+                        <h4>Bắt Đầu Hẹn Hò</h4>
+                        <p>Sau những lần trò chuyện và những buổi cà phê chiều, chúng mình quyết định đến với nhau.</p>
+                    </div>
+                </div>
+                <div class="timeline-item timeline-left">
+                    <div class="timeline-content">
+                        <span class="timeline-date">2023</span>
+                        <h4>Lời Cầu Hôn</h4>
+                        <p>Dưới ánh hoàng hôn lãng mạn, Minh Đức đã cầu hôn Đỗ Huyền với chiếc nhẫn kim cương lấp lánh.
+                        </p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+                <div class="timeline-item timeline-right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2026</span>
+                        <h4>Ngày Trọng Đại</h4>
+                        <p>28/03/2026 – Ngày chúng mình chính thức trở thành một gia đình, cùng nhau bước vào cuộc sống
+                            mới.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== EVENTS SECTION ===================== -->
+    <!-- <section class="events-section" id="events">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <p class="section-pre">Schedule</p>
+                <h2 class="section-title">SỰ KIỆN</h2>
+                <div class="section-divider">
+                    <span></span><span class="dot"></span><span></span>
+                </div>
+            </div>
+            <div class="events-tabs animate-on-scroll">
+                <button class="event-tab active" data-tab="ceremony">Lễ Vu Quy</button>
+                <button class="event-tab" data-tab="reception">Lễ Thành Hôn</button>
+                <button class="event-tab" data-tab="party">Tiệc Cưới</button>
+            </div>
+            <div class="events-content animate-on-scroll">
+                <div class="event-panel active" id="ceremony">
+                    <div class="event-card">
+                        <div class="event-icon">🕯️</div>
+                        <div class="event-info">
+                            <h3>Lễ Vu Quy</h3>
+                            <p class="event-time">07:00 AM – Thứ Bảy, 28/03/2026</p>
+                            <p class="event-location">📍 Nhà Gái: 123 Đường Hoa Hồng, Quận 1, TP.HCM</p>
+                            <p class="event-desc">Buổi lễ truyền thống tại nhà gái, nơi cô dâu sẽ được đón về nhà chồng
+                                với đầy đủ nghi lễ trang trọng.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="event-panel" id="reception">
+                    <div class="event-card">
+                        <div class="event-icon">💍</div>
+                        <div class="event-info">
+                            <h3>Lễ Thành Hôn</h3>
+                            <p class="event-time">10:00 AM – Thứ Bảy, 28/03/2026</p>
+                            <p class="event-location">📍 Nhà Trai: 456 Đường Bạch Mai, Quận Hoàng Mai, TP.HCM</p>
+                            <p class="event-desc">Lễ đón dâu và thành hôn chính thức, đánh dấu sự kết hợp thiêng liêng
+                                của hai gia đình.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="event-panel" id="party">
+                    <div class="event-card">
+                        <div class="event-icon">🥂</div>
+                        <div class="event-info">
+                            <h3>Tiệc Cưới</h3>
+                            <p class="event-time">18:00 PM – Thứ Bảy, 28/03/2026</p>
+                            <p class="event-location">📍 Nhà Hàng Hoàng Gia, 789 Đường Lê Văn Lương, Hà Nội</p>
+                            <p class="event-desc">Tiệc cưới long trọng với sự hiện diện của gia đình và bạn bè thân
+                                thiết. Dress code: Formal / Áo dài.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="events-map animate-on-scroll">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59587.97785476711!2d105.80194635!3d21.02195015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab9bd9861ca1%3A0xe7887f7b72ca17a9!2zSMOgIE7hu5lpLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1699999999999!5m2!1svi!2s"
+                    width="100%" height="300" style="border:0; border-radius: 12px;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade" title="Wedding Venue Map"></iframe>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- ===================== RSVP SECTION ===================== -->
+    <!-- <section class="rsvp-section" id="rsvp">
+        <div class="rsvp-floral-left"></div>
+        <div class="rsvp-floral-right"></div>
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <p class="section-pre">Please</p>
+                <h2 class="section-title">XÁC NHẬN THAM DỰ</h2>
+                <div class="section-divider">
+                    <span></span><span class="dot"></span><span></span>
+                </div>
+                <p class="section-desc">Chúng mình rất hân hạnh được đón tiếp bạn. Vui lòng xác nhận tham dự trước ngày
+                    <strong>20/03/2026</strong>
+                </p>
+            </div>
+            <form class="rsvp-form animate-on-scroll" id="rsvpForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="guestName">Họ và tên *</label>
+                        <input type="text" id="guestName" name="guestName" placeholder="Nguyễn Văn A" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="guestPhone">Số điện thoại *</label>
+                        <input type="tel" id="guestPhone" name="guestPhone" placeholder="0901 234 567" required />
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="guestCount">Số người tham dự *</label>
+                        <select id="guestCount" name="guestCount" required>
+                            <option value="">Chọn số người...</option>
+                            <option value="1">1 người</option>
+                            <option value="2">2 người</option>
+                            <option value="3">3 người</option>
+                            <option value="4">4 người</option>
+                            <option value="5+">5+ người</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="attendance">Tham dự *</label>
+                        <select id="attendance" name="attendance" required>
+                            <option value="">Chọn...</option>
+                            <option value="yes">Sẽ tham dự 🎉</option>
+                            <option value="no">Rất tiếc không thể</option>
+                            <option value="maybe">Chưa chắc chắn</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="message">Lời chúc mừng</label>
+                    <textarea id="message" name="message" rows="4"
+                        placeholder="Gửi đến đôi tân lang, tân nương lời chúc tốt đẹp nhất..."></textarea>
+                </div>
+                <div class="form-submit">
+                    <button type="submit" class="btn btn-primary btn-large">Gửi Xác Nhận 💌</button>
+                </div>
+            </form>
+            <div class="rsvp-success" id="rsvpSuccess" style="display:none">
+                <div class="success-icon">💖</div>
+                <h3>Cảm ơn bạn!</h3>
+                <p>Chúng mình đã nhận được xác nhận của bạn. Hẹn gặp lại vào ngày vui nhé! 🎊</p>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- ===================== GALLERY LIGHTBOX ===================== -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose">✕</button>
+        <button class="lightbox-prev" id="lightboxPrev">‹</button>
+        <button class="lightbox-next" id="lightboxNext">›</button>
+        <div class="lightbox-img-wrap">
+            <img id="lightboxImg" src="" alt="Gallery" />
+        </div>
+    </div>
+
+    <!-- ===================== HỘP MỪNG CƯỚI ===================== -->
+    <section class="gift-section" id="gift">
+        <!-- Side photos -->
+        <div class="gift-side gift-side-left">
+            <img src="https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?w=300&h=500&fit=crop&auto=format"
+                alt="Chú rể" />
+        </div>
+        <div class="gift-side gift-side-right">
+            <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=300&h=500&fit=crop&auto=format"
+                alt="Cô dâu" />
+        </div>
+
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <h2 class="gift-title">Hộp mừng cưới</h2>
+                <p class="gift-desc">
+                    Nếu có thể, bạn hãy tới tham dự Đám cưới, chung vui và Mừng cưới trực tiếp<br />
+                    cho chúng mình nhé <span>˄ ˄</span>. Cảm ơn bạn rất nhiều!
+                </p>
+            </div>
+
+            <div class="gift-cards animate-on-scroll">
+                <!-- Groom card -->
+                <div class="gift-card gift-card-groom">
+                    <div class="gift-card-inner">
+                        <div class="gift-card-info">
+                            <p class="gift-card-label groom-label">Mừng cưới đến chú rể</p>
+                            <p class="gift-card-bank">Ngân hàng Vietcombank</p>
+                            <p class="gift-card-name">Bùi Minh Đức</p>
+                            <p class="gift-card-number">1234 5678 9012</p>
+                        </div>
+                        <div class="gift-qr">
+                            <!-- QR code placeholder using CSS art -->
+                            <div class="qr-box">
+                                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" class="qr-svg">
+                                    <!-- QR border corners -->
+                                    <rect x="5" y="5" width="30" height="30" rx="3" fill="none" stroke="#333"
+                                        stroke-width="3" />
+                                    <rect x="11" y="11" width="18" height="18" rx="1" fill="#333" />
+                                    <rect x="65" y="5" width="30" height="30" rx="3" fill="none" stroke="#333"
+                                        stroke-width="3" />
+                                    <rect x="71" y="11" width="18" height="18" rx="1" fill="#333" />
+                                    <rect x="5" y="65" width="30" height="30" rx="3" fill="none" stroke="#333"
+                                        stroke-width="3" />
+                                    <rect x="11" y="71" width="18" height="18" rx="1" fill="#333" />
+                                    <!-- QR dots pattern -->
+                                    <rect x="45" y="5" width="6" height="6" fill="#333" />
+                                    <rect x="53" y="5" width="6" height="6" fill="#333" />
+                                    <rect x="45" y="13" width="6" height="6" fill="#333" />
+                                    <rect x="45" y="21" width="6" height="6" fill="#333" />
+                                    <rect x="53" y="21" width="6" height="6" fill="#333" />
+                                    <rect x="5" y="45" width="6" height="6" fill="#333" />
+                                    <rect x="13" y="45" width="6" height="6" fill="#333" />
+                                    <rect x="5" y="53" width="6" height="6" fill="#333" />
+                                    <rect x="13" y="53" width="6" height="6" fill="#333" />
+                                    <rect x="45" y="45" width="6" height="6" fill="#333" />
+                                    <rect x="53" y="53" width="6" height="6" fill="#333" />
+                                    <rect x="61" y="45" width="6" height="6" fill="#333" />
+                                    <rect x="45" y="61" width="6" height="6" fill="#333" />
+                                    <rect x="61" y="61" width="6" height="6" fill="#333" />
+                                    <rect x="69" y="45" width="6" height="6" fill="#333" />
+                                    <rect x="77" y="53" width="6" height="6" fill="#333" />
+                                    <rect x="85" y="45" width="6" height="6" fill="#333" />
+                                    <rect x="69" y="61" width="6" height="6" fill="#333" />
+                                    <rect x="77" y="69" width="6" height="6" fill="#333" />
+                                    <rect x="85" y="77" width="6" height="6" fill="#333" />
+                                    <rect x="53" y="77" width="6" height="6" fill="#333" />
+                                    <rect x="45" y="85" width="6" height="6" fill="#333" />
+                                    <rect x="61" y="85" width="6" height="6" fill="#333" />
+                                    <rect x="77" y="85" width="6" height="6" fill="#333" />
+                                    <rect x="85" y="61" width="6" height="6" fill="#333" />
+                                    <rect x="21" y="45" width="6" height="6" fill="#333" />
+                                    <rect x="29" y="53" width="6" height="6" fill="#333" />
+                                    <rect x="37" y="45" width="6" height="6" fill="#333" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gift-brush gift-brush-groom"></div>
+                </div>
+
+                <!-- Bride card -->
+                <div class="gift-card gift-card-bride">
+                    <div class="gift-card-inner">
+                        <div class="gift-qr">
+                            <div class="qr-box">
+                                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" class="qr-svg">
+                                    <rect x="5" y="5" width="30" height="30" rx="3" fill="none" stroke="#333"
+                                        stroke-width="3" />
+                                    <rect x="11" y="11" width="18" height="18" rx="1" fill="#333" />
+                                    <rect x="65" y="5" width="30" height="30" rx="3" fill="none" stroke="#333"
+                                        stroke-width="3" />
+                                    <rect x="71" y="11" width="18" height="18" rx="1" fill="#333" />
+                                    <rect x="5" y="65" width="30" height="30" rx="3" fill="none" stroke="#333"
+                                        stroke-width="3" />
+                                    <rect x="11" y="71" width="18" height="18" rx="1" fill="#333" />
+                                    <rect x="45" y="5" width="6" height="6" fill="#333" />
+                                    <rect x="53" y="13" width="6" height="6" fill="#333" />
+                                    <rect x="45" y="21" width="6" height="6" fill="#333" />
+                                    <rect x="5" y="45" width="6" height="6" fill="#333" />
+                                    <rect x="13" y="37" width="6" height="6" fill="#333" />
+                                    <rect x="21" y="53" width="6" height="6" fill="#333" />
+                                    <rect x="45" y="45" width="6" height="6" fill="#333" />
+                                    <rect x="53" y="37" width="6" height="6" fill="#333" />
+                                    <rect x="61" y="53" width="6" height="6" fill="#333" />
+                                    <rect x="69" y="37" width="6" height="6" fill="#333" />
+                                    <rect x="77" y="45" width="6" height="6" fill="#333" />
+                                    <rect x="85" y="53" width="6" height="6" fill="#333" />
+                                    <rect x="69" y="69" width="6" height="6" fill="#333" />
+                                    <rect x="53" y="61" width="6" height="6" fill="#333" />
+                                    <rect x="45" y="77" width="6" height="6" fill="#333" />
+                                    <rect x="61" y="77" width="6" height="6" fill="#333" />
+                                    <rect x="77" y="77" width="6" height="6" fill="#333" />
+                                    <rect x="85" y="69" width="6" height="6" fill="#333" />
+                                    <rect x="29" y="45" width="6" height="6" fill="#333" />
+                                    <rect x="37" y="53" width="6" height="6" fill="#333" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="gift-card-info gift-card-info-right">
+                            <p class="gift-card-label bride-label">Mừng cưới đến cô dâu</p>
+                            <p class="gift-card-bank">Ngân hàng Techcombank</p>
+                            <p class="gift-card-name">Đỗ Thị Huyền</p>
+                            <p class="gift-card-number">9876 5432 1098</p>
+                        </div>
+                    </div>
+                    <div class="gift-brush gift-brush-bride"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="footer" id="footer">
+        <div class="footer-floral"></div>
+        <div class="footer-content">
+            <div class="footer-photo-frame">
+                <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=300&h=400&fit=crop&auto=format"
+                    alt="Minh Đức & Đỗ Huyền" class="footer-photo" />
+            </div>
+            <div class="footer-names">
+                <h2 class="footer-couple-name">Minh Đức</h2>
+                <span class="footer-and">&amp;</span>
+                <h2 class="footer-couple-name">Đỗ Huyền</h2>
+            </div>
+            <p class="footer-date">28 . 3 . 2026</p>
+            <p class="footer-quote">"Hành trình ngàn dặm bắt đầu từ một bước đi – và bước đi của chúng mình là cùng
+                nhau."</p>
+            <nav class="footer-nav">
+                <a href="#home">Trang Chủ</a>
+                <a href="#album">Album</a>
+                <a href="#story">Câu Chuyện</a>
+                <a href="#events">Sự Kiện</a>
+                <a href="#rsvp">RSVP</a>
+            </nav>
+            <p class="footer-copy">© 2026 Minh Đức & Đỗ Huyền. Made with ❤️</p>
+        </div>
+    </footer>
+
+    <!-- Scroll to top button -->
+    <button class="scroll-top" id="scrollTop" title="Về đầu trang">↑</button>
+
+    <!-- Music toggle -->
+    <button class="music-toggle" id="musicToggle" title="Nhạc nền">🎵</button>
+    <audio id="bgMusic" loop>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg" />
+    </audio>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
