@@ -711,6 +711,109 @@ a {
   flex-wrap: wrap;
 }
 
+/* --- Date Grid for both families --- */
+.date-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin: 40px auto;
+  max-width: 900px;
+}
+
+.date-column {
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid var(--color-gold-light);
+  border-radius: 16px;
+  box-shadow: var(--shadow-soft);
+  transition: var(--transition);
+}
+
+.date-column:hover {
+  transform: translateY(-5px);
+  background: var(--color-white);
+}
+
+.family-label {
+  font-family: sans-serif;
+  font-size: 1.6rem;
+  color: var(--color-rose);
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+.date-address {
+  font-size: 1.1rem;
+  color: var(--color-text-light);
+  margin-top: 15px;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .date-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 0 10px;
+  }
+}
+
+/* --- Compact Countdown inside columns --- */
+.countdown-mini {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px dashed var(--color-gold-light);
+}
+
+.countdown-label-small {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-style: italic;
+  color: var(--color-rose);
+  margin-bottom: 12px;
+}
+
+.date-column .countdown {
+  gap: 6px;
+  margin-bottom: 0;
+  justify-content: center;
+}
+
+.date-column .countdown-item {
+  padding: 8px 10px;
+  min-width: 60px;
+  background: white;
+  border: 1px solid var(--color-gold-light);
+  box-shadow: 0 2px 8px rgba(122, 92, 68, 0.08);
+}
+
+.date-column .count-num {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--color-rose);
+}
+
+.date-column .count-label {
+  font-size: 0.6rem;
+  letter-spacing: 1px;
+  color: var(--color-text-light);
+}
+
+.date-column .countdown-sep {
+  padding-top: 10px;
+  font-size: 1.2rem;
+  color: var(--color-gold);
+}
+
+.date-grid .time-num {
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.date-grid .date-num {
+  font-size: clamp(1.4rem, 3vw, 2.2rem);
+  letter-spacing: 2px;
+}
+
 /* =============================================
    COUPLE INTRO
    ============================================= */

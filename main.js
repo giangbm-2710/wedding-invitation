@@ -36,41 +36,48 @@
 
 // ===== 2. COUNTDOWN TIMER =====
 (function initCountdown() {
-  const weddingDate = new Date('2026-03-28T10:30:00').getTime();
-
-  const daysEl = document.getElementById('days');
-  const hoursEl = document.getElementById('hours');
-  const minutesEl = document.getElementById('minutes');
-  const secondsEl = document.getElementById('seconds');
-
-  if (!daysEl || !secondsEl) return;
+  const countdowns = document.querySelectorAll('.countdown');
+  if (!countdowns.length) return;
 
   function pad(n) { return String(n).padStart(2, '0'); }
 
-  function updateCountdown() {
+  function updateAllCountdowns() {
     const now = Date.now();
-    const diff = weddingDate - now;
 
-    if (diff <= 0) {
-      // Wedding has passed — show "Đã diễn ra"
-      document.getElementById('countdown').innerHTML =
-        '<p style="font-family:var(--font-script); font-size:2.5rem; color:var(--color-rose);">Đã diễn ra 💕</p>';
-      return;
-    }
+    countdowns.forEach((el) => {
+      const targetDateStr = el.getAttribute('data-date');
+      if (!targetDateStr) return;
 
-    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+      const targetDate = new Date(targetDateStr).getTime();
+      const diff = targetDate - now;
 
-    daysEl.textContent = pad(days);
-    hoursEl.textContent = pad(hours);
-    minutesEl.textContent = pad(minutes);
-    secondsEl.textContent = pad(seconds);
+      const daysEl = el.querySelector('.js-days');
+      const hoursEl = el.querySelector('.js-hours');
+      const minutesEl = el.querySelector('.js-minutes');
+      const secondsEl = el.querySelector('.js-seconds');
+
+      if (!daysEl) return;
+
+      if (diff <= 0) {
+        // Find existing text or replace
+        el.innerHTML = '<p style="font-family:var(--font-script); font-size:1.5rem; color:var(--color-rose); margin-top:8px;">Đã diễn ra 💕</p>';
+        return;
+      }
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+      daysEl.textContent = pad(days);
+      hoursEl.textContent = pad(hours);
+      minutesEl.textContent = pad(minutes);
+      secondsEl.textContent = pad(seconds);
+    });
   }
 
-  updateCountdown();
-  setInterval(updateCountdown, 1000);
+  updateAllCountdowns();
+  setInterval(updateAllCountdowns, 1000);
 })();
 
 // ===== 3. SCROLL ANIMATION =====
