@@ -20,8 +20,7 @@
     const leftPct = Math.random() * 100;
     const duration = 6 + Math.random() * 10; // 6–16s
     const delay = Math.random() * 12; // 0–12s
-    const size = 8 + Math.random() * 10; // 8–18px
-    const hue = 5 + Math.random() * 25; // pinkish range
+    const size = 15 + Math.random() * 15; // 15–30px
 
     petal.style.cssText = `
       left: ${leftPct}%;
@@ -29,7 +28,6 @@
       height: ${size * 1.4}px;
       animation-duration: ${duration}s;
       animation-delay: ${delay}s;
-      filter: hue-rotate(${hue}deg);
     `;
 
     container.appendChild(petal);
@@ -274,21 +272,67 @@
   if (!btn || !audio) return;
 
   let playing = false;
+  let hasInteracted = false;
+  audio.volume = 1.0; // Âm lượng tối đa
 
-  btn.addEventListener('click', () => {
+  function updateBtnUI() {
     if (playing) {
-      audio.pause();
-      btn.classList.remove('playing');
-      btn.textContent = '🎵';
-    } else {
-      audio.volume = 0.3;
-      audio.play().catch(() => {
-        // Autoplay blocked — handled gracefully
-      });
       btn.classList.add('playing');
       btn.textContent = '🔇';
+    } else {
+      btn.classList.remove('playing');
+      btn.textContent = '🎵';
     }
-    playing = !playing;
+  }
+
+  function playMusic() {
+    const playPromise = audio.play();
+    if (playPromise !== undefined) {
+      playPromise.then(() => {
+        playing = true;
+        updateBtnUI();
+      }).catch(error => {
+        // Tắt cờ playing nếu play bị lỗi (do thiếu source mp3 hoặc bị chặn)
+        playing = false;
+        updateBtnUI();
+        console.error("Audio play failed:", error);
+      });
+    }
+  }
+
+  // Thử tự động bật ngay khi khởi tạo
+  playMusic();
+
+  // Bắt sự kiện click để bật nhạc (chỉ 1 lần lầu tiên)
+  function unlockAudio() {
+    if (hasInteracted) return;
+    hasInteracted = true;
+    if (!playing) {
+      playMusic();
+    }
+    document.body.removeEventListener('click', unlockAudio);
+    document.body.removeEventListener('touchstart', unlockAudio);
+  }
+
+  document.body.addEventListener('click', unlockAudio);
+  document.body.addEventListener('touchstart', unlockAudio);
+
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    hasInteracted = true; 
+    document.body.removeEventListener('click', unlockAudio);
+    document.body.removeEventListener('touchstart', unlockAudio);
+
+    if (playing) {
+      audio.pause();
+      playing = false;
+      updateBtnUI();
+    } else {
+      // Ép buộc playing true tạm thời để nút phản hồi, nếu lỗi sẽ tự tắt
+      playing = true; 
+      updateBtnUI();
+      playMusic();
+    }
   });
 })();
 
