@@ -652,7 +652,8 @@ a {
 
 .date-sub-title {
   font-family: var(--font-serif);
-  font-size: 1.05rem;
+  font-size: 1.8rem;
+  font-weight: bold;
   font-style: italic;
   color: var(--color-rose);
   letter-spacing: 1px;
@@ -1429,7 +1430,7 @@ a {
 }
 
 .gift-desc {
-  font-size: 0.95rem;
+  font-size: 1.0rem;
   color: var(--color-text-light);
   line-height: 1.9;
   max-width: 500px;
@@ -1523,14 +1524,14 @@ a {
 }
 
 .gift-card-bank {
-  font-size: 0.82rem;
+  font-size: 1.2rem;
   color: var(--color-text-light);
   letter-spacing: 0.5px;
 }
 
 .gift-card-name {
   font-family: var(--font-serif);
-  font-size: 1rem;
+  font-size: 1.5rem;
   color: var(--color-text);
   font-weight: 600;
 }
